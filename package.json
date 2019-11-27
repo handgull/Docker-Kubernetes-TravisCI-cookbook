@@ -1,0 +1,15 @@
+{
+  "name": "docker-kubernetes-travisci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:build": "vuepress build"
+  },
+  "keywords": [],
+  "author": "handgull",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
