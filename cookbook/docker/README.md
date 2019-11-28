@@ -60,7 +60,7 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 #### Docker image
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
-All'interno di un immagine vi è:
+All'interno di un'immagine vi è:
 1. un **Filesystem Snapshot**, ovvero una "foto" di un Filesystem da implementare, una specie di copia-incolla di directory e files.
 2. uno **Startup Command**, ovvero un comando che si esegue all'avvio del container.
 
