@@ -48,7 +48,7 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 
 ### Containers
 Un container è un **processo** con delle limitazioni hardware, non è un costrutto fisico:
-1. **Name space** = Isola le risorse del processo.<br>
+1. **Name space** = Isola le risorse del processo.
 2. **Control Group** = Limita le risorse hardware usate dal processo.
 
 #### Come funziona un OS (Operating System)
@@ -60,6 +60,7 @@ Un container è un **processo** con delle limitazioni hardware, non è un costru
 All'interno di un immagine vi è:
 1. un **Filesystem Snapshot**, ovvero una "foto" di un Filesystem da implementare, una specie di copia-incolla di directory e files.
 2. uno **Startup Command**, ovvero un comando che si esegue all'avvio del container.
+
 Una volta creato un container a partire da questa immagine il container isolerà una porzione di Hard Drive per lui (quindi è come se in qella porzione di HD ci andasse il FS SnapShot)
 
 ![diagram06](./assets/diagram-07.png)
