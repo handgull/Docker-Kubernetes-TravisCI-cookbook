@@ -2,7 +2,6 @@
 prev: false
 next: ./manipulating-containers/
 ---
-
 # Alla scoperta di Docker!
 
 ## WHY & WHAT: perchè usare docker? Cos'è?
@@ -10,7 +9,7 @@ Docker vuole rendere immediata l'installazione di un software su qualsiasi macch
 
 ![diagram01](./assets/diagram-01.png)
 
-E' una piattaforma che si compone di tools per la gestione dei **container**.
+È una piattaforma che si compone di tools per la gestione dei **container**.
 
 ![diagram02](./assets/diagram-02.png)
 

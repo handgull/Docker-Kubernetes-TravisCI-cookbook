@@ -4,8 +4,8 @@ module.exports = {
   themeConfig: {
     logo: '/assets/img/logo.png',
     repo: 'handgull/Docker-Kubernetes-TravisCI-cookbook',
-    editLinkText: 'Help us improve this page!',
     editLinks: true,
+    editLinkText: 'Help us improve this page!',
     sidebar: 'auto'
   }
 }
