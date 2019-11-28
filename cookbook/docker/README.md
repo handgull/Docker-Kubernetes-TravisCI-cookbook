@@ -53,14 +53,14 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 
 #### Come funziona un OS (Operating System)
 ![diagram05](./assets/diagram-05.png)
-> **Kernel**: Layer che fa da middleware tra i programmi e le risorse hardware
+> **Kernel**: Layer che fa da [middleware](https://it.wikipedia.org/wiki/Middleware) tra i programmi e le risorse hardware
 
 ![diagram06](./assets/diagram-06.png)
 
 #### Docker image
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
-All'interno di un'immagine vi è:
+All'interno di unimmagine vi è:
 1. un **Filesystem Snapshot**, ovvero una "foto" di un Filesystem da implementare, una specie di copia-incolla di directory e files.
 2. uno **Startup Command**, ovvero un comando che si esegue all'avvio del container.
 

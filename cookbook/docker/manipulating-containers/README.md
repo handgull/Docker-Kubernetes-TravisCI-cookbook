@@ -8,7 +8,7 @@ next: false
 ``` bash
 $ (sudo) docker run <nome_immagine> # Crea ed avvia il container usando l'immagine
 ```
-È anche possibile fare un **override** del comando eseguito all'avvio del container:
+È anche possibile fare un [override](https://it.wikipedia.org/wiki/Override) del comando eseguito all'avvio del container:
 ``` bash
 $ (sudo) docker run <nome_immagine> <comando> # All'avvio non uso il comando specificato nell'immagine
 # ad esempio:
