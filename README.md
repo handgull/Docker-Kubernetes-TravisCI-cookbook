@@ -4,7 +4,7 @@ heroImage: /assets/img/hero.png
 heroText: Docker, Kubernetes & Travis CI
 tagline: I primi passi verso il Dev Ops
 actionText: Learn now →
-actionLink: /cookbook/docker/
+actionLink: /docker/
 features:
 - title: Docker
   details: Docker raccoglie il software in container, che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e runtime.

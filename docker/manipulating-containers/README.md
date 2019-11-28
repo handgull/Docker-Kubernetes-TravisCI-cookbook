@@ -1,7 +1,3 @@
----
-prev: ../
-next: false
----
 # Manipolare i container
 
 ## Creare e avviare un container

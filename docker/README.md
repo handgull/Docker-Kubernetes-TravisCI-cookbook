@@ -1,7 +1,3 @@
----
-prev: false
-next: ./manipulating-containers/
----
 # Alla scoperta di Docker!
 
 ## WHY & WHAT: perchè usare docker? Cos'è?
@@ -49,7 +45,7 @@ Messaggio stampato a video dopo l'esecuzione:
 ![diagram03](./assets/diagram-03.png)
 ![diagram04](./assets/diagram-04.png)
 
-### Focus: Docker Hub
+### Focus: Docker Hub e Docker Images
 Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come visto sopra quando non si trova un immagine Docker prova automaticamente a scaricarla da qui.
 
 #### Come funziona un OS (Operating System)
