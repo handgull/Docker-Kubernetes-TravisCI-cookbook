@@ -20,7 +20,7 @@ Docker è una piattaforma che si compone di tools per la gestione dei **containe
 
 ### Focus: Docker Client e Docker Server
 ::: tip
-C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI io posso dire alla docker Hub (Passando per il Docker Server, a.k.a. Daemon) di scaricare una determinata **Docker image**, che può essere usata per instanziare un container
+C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI io posso dire alla docker Hub (Passando per il Docker Server, a.k.a. Daemon) di scaricare una determinata **Docker image** (Vedi [sotto](./#docker-image)), che può essere usata per instanziare un container
 :::
 - **Docker CLI** = applicativo che da terminale mi aiuta a dare comandi al Docker Server.
 - **Docker Server** = applicativo che gira in background tramite il quale io faccio tutto ciò che è possibile fare con docker.
@@ -56,6 +56,9 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 > **Kernel**: Layer che fa da middleware tra i programmi e le risorse hardware
 
 ![diagram06](./assets/diagram-06.png)
+
+#### Docker image
+> Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
 All'interno di un immagine vi è:
 1. un **Filesystem Snapshot**, ovvero una "foto" di un Filesystem da implementare, una specie di copia-incolla di directory e files.
