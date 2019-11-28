@@ -9,7 +9,12 @@ Docker vuole rendere immediata l'installazione di un software su qualsiasi macch
 
 ![diagram01](./assets/diagram-01.png)
 
-È una piattaforma che si compone di tools per la gestione dei **container**.
+### Containers
+Un container è un **processo** con delle limitazioni hardware, non è un costrutto fisico:
+1. **Name space** = Isola le risorse del processo.
+2. **Control Group** = Limita le risorse hardware usate dal processo.
+
+Docker è una piattaforma che si compone di tools per la gestione dei **container**.
 
 ![diagram02](./assets/diagram-02.png)
 
@@ -45,11 +50,6 @@ To generate this message, Docker took the following steps:
 
 ### Focus: Docker Hub
 Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come visto sopra quando non si trova un immagine Docker prova automaticamente a scaricarla da qui.
-
-### Containers
-Un container è un **processo** con delle limitazioni hardware, non è un costrutto fisico:
-1. **Name space** = Isola le risorse del processo.
-2. **Control Group** = Limita le risorse hardware usate dal processo.
 
 #### Come funziona un OS (Operating System)
 ![diagram05](./assets/diagram-05.png)
