@@ -8,13 +8,13 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     nav: [
       { text: 'Docker', link: '/docker/' },
-      { text: 'Kubernetes', link: '/kubernetes/' },
-      { text: 'Travis CI', link: '/travis/' }
+      { text: 'Travis CI', link: '/travis/' },
+      { text: 'Kubernetes', link: '/kubernetes/' }
     ],
     sidebar: {
-      '/docker/': getDockerSidebar('Docker', 'Kubernetes', 'Travis CI'),
-      '/kubernetes/': getKubernetesSidebar('Docker', 'Kubernetes', 'Travis CI'),
-      '/travis/': getTravisSidebar('Docker', 'Kubernetes', 'Travis CI'),
+      '/docker/': getDockerSidebar('Docker', 'Travis CI', 'Kubernetes'),
+      '/travis/': getTravisSidebar('Docker', 'Travis CI', 'Kubernetes'),
+      '/kubernetes/': getKubernetesSidebar('Docker', 'Travis CI', 'Kubernetes'),
     }
   }
 }
@@ -34,41 +34,14 @@ function getDockerSidebar (groupA, groupB, groupC) {
       collapsable: false,
       sidebarDepth: 0,
       children: [
+        '../travis/'
+      ]
+    }, {
+      title: groupC,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
         '../kubernetes/'
-      ]
-    }, {
-      title: groupC,
-      collapsable: false,
-      sidebarDepth: 0,
-      children: [
-        '../travis/'
-      ]
-    }
-  ]
-}
-
-function getKubernetesSidebar (groupA, groupB, groupC) {
-  return [
-    {
-      title: groupA,
-      collapsable: false,
-      sidebarDepth: 0,
-      children: [
-        '../docker/'
-      ]
-    }, {
-      title: groupB,
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        ''
-      ]
-    }, {
-      title: groupC,
-      collapsable: false,
-      sidebarDepth: 0,
-      children: [
-        '../travis/'
       ]
     }
   ]
@@ -86,9 +59,36 @@ function getTravisSidebar (groupA, groupB, groupC) {
     }, {
       title: groupB,
       collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ''
+      ]
+    }, {
+      title: groupC,
+      collapsable: false,
       sidebarDepth: 0,
       children: [
         '../kubernetes/'
+      ]
+    }
+  ]
+}
+
+function getKubernetesSidebar (groupA, groupB, groupC) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        '../docker/'
+      ]
+    }, {
+      title: groupB,
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        '../travis/'
       ]
     }, {
       title: groupC,
