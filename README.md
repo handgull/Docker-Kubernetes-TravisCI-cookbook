@@ -15,3 +15,5 @@ features:
 ---
 Fonti:<br>
 - [Corso Udemy di Stephen Grider](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/)
+- [What is a Container? di  VMware Cloud Native Apps](https://www.youtube.com/watch?v=EnJ7qX9fkcU&feature=youtu.be)
+- [The Benefits of Containers](https://www.youtube.com/watch?v=cCTLjAdIQho&feature=youtu.be)

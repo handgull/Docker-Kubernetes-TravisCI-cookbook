@@ -9,6 +9,7 @@
 > (sudo) docker run <nome_immagine> <comando> # All'avvio non uso il comando specificato nell'immagine
 # Ad esempio:
 > (sudo) docker run busybox ls # Crea l'immagine e fa vedere il File system del container
+# NOTA: busybox combina diverse applicazioni standard Unix in un piccolo eseguibile
 ```
 > Se provate `docker run hello-world ls` vi darà errore, perchè **nel container**, più precisamente nel suo FS, **non c'è** un eseguibile che renda sensato il comando 'ls'
 
@@ -28,7 +29,7 @@ Nel campo **NAMES** vi è un nome generato casualmente per identificare il conta
 :::
 
 ## Lifecycle: Ciclo di vita di un container
-![diagram09](./assets/diagram-09.png)
+![docker-diagrams-09](./assets/docker-diagrams-09.png)
 - Nella fase di **creazione** di un container il FS viene **caricato** nell' Hard Drive.
 - Nella fase di **esecuzione** eseguo lo **Startup Command**
 ``` bash
