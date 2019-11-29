@@ -14,6 +14,6 @@ features:
   details: Kubernetes è uno strumento di orchestrazione e gestione dei container. È ideale per tutti i business che hanno bisogno di una soluzione in HA (Alta Disponibilità) e garantisce la continuità del servizio con SLA prossimi al 100%.
 ---
 Fonti:<br>
-- [Corso Udemy di Stephen Grider](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/)
-- [What is a Container? di  VMware Cloud Native Apps](https://www.youtube.com/watch?v=EnJ7qX9fkcU&feature=youtu.be)
-- [The Benefits of Containers](https://www.youtube.com/watch?v=cCTLjAdIQho&feature=youtu.be)
+- [Corso Udemy - Stephen Grider](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/)
+- [What is a Container? -  VMware Cloud Native Apps](https://www.youtube.com/watch?v=EnJ7qX9fkcU&feature=youtu.be)
+- [The Benefits of Containers -  VMware Cloud Native Apps](https://www.youtube.com/watch?v=cCTLjAdIQho&feature=youtu.be)
