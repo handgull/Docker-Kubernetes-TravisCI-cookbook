@@ -17,7 +17,11 @@ module.exports = {
       '/travis/': getTravisSidebar('Docker', 'Travis CI', 'Kubernetes'),
       '/kubernetes/': getKubernetesSidebar('Docker', 'Travis CI', 'Kubernetes'),
     }
-  }
+  },
+  plugins: ['@vuepress/pwa', {
+    serviceWorker: true,
+    updatePopup: true
+  }],
 }
 
 function getDockerSidebar (groupA, groupB, groupC) {
