@@ -71,7 +71,7 @@ Un altra nozione interessante è che le immagini possono avere un rapporto **par
 - In questo modo è possibile che delle immagini **condividano** dei **nodi**
 - Se trovo una vulnerabilità/problema in un nodo la **modularità** dell'immagine mi fa comodo
 
-![docker-diagrams-06](./assets/docker-diagrams-10.png)
+![docker-diagrams-10](./assets/docker-diagrams-10.png)
 
 ### Dockerfile
 Un dockerfile è un **envinronment** descritto in un file di testo, dentro si scrivono comandi docker di cui necessitiamo l'esecuzione per configurare la nostra **immagine custom** (vedi capitolo)
