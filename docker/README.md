@@ -5,10 +5,29 @@ Docker vuole rendere **immediata** l'installazione di un software su qualsiasi m
 
 ![docker-diagrams-01](./assets/docker-diagrams-01.png)
 
+> "Docker is for server applications—Web sites, APIs, messaging solutions and other components that run in the background. You can't run desktop apps in Docker because there's no UI integration between the Docker platform and the Windows host. That rules out running Windows Forms or Windows Presentation Foundation (WPF) apps in containers (although you could use Docker to package and distribute those desktop apps), but Windows Communication Foundation (WCF), .NET console apps and all flavors of ASP.NET are great candidates."
+::: tip
+In parole semplici: niente app con le UI nei container
+| Applicativo                                                           | Va bene?      |
+| --------------------------------------------------------------------- |:-------------:|
+| [Redis](https://redis.io/)                                            | Yes           |
+| [WPF](https://it.wikipedia.org/wiki/Windows_Presentation_Foundation)  | No            |
+| [WCF](https://it.wikipedia.org/wiki/Windows_Communication_Foundation) | Yes           |
+:::
+
 ### Containers
+
+#### Ma prima... come funziona un OS (Operating System)
+
+![docker-diagrams-05](./assets/docker-diagrams-05.png)
+
+> **Kernel**: Layer che fa da [middleware](https://it.wikipedia.org/wiki/Middleware) tra i programmi e le risorse hardware
+
 Un container è un **processo** con delle limitazioni hardware, non è un costrutto fisico:
 1. **Name space** = Isola le risorse del processo.
 2. **Control Group** = Limita le risorse hardware usate dal processo.
+
+![docker-diagrams-06](./assets/docker-diagrams-06.png)
 
 Docker è una piattaforma che si compone di tools per la gestione dei **container**.
 
@@ -48,11 +67,6 @@ Messaggio stampato a video dopo l'esecuzione:
 ### Focus: Docker Hub e Docker Images
 Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come visto sopra quando non si trova un immagine Docker prova automaticamente a scaricarla da qui.
 
-#### Come funziona un OS (Operating System)
-![docker-diagrams-05](./assets/docker-diagrams-05.png)
-> **Kernel**: Layer che fa da [middleware](https://it.wikipedia.org/wiki/Middleware) tra i programmi e le risorse hardware
-
-![docker-diagrams-06](./assets/docker-diagrams-06.png)
 
 #### Docker image
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
