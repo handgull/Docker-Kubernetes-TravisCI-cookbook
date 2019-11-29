@@ -6,6 +6,7 @@ module.exports = {
     repo: 'handgull/Docker-Kubernetes-TravisCI-cookbook',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
+    lastUpdated: 'Last Updated',
     nav: [
       { text: 'Docker', link: '/docker/' },
       { text: 'Travis CI', link: '/travis/' },
