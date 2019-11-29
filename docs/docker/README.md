@@ -1,4 +1,4 @@
-# Alla scoperta di Docker!
+# Alla scoperta di Docker! pwa?
 
 ## WHY & WHAT: perchè usare docker? Cos'è?
 Docker vuole rendere **immediata** l'installazione di un software su qualsiasi macchina senza preoccuparsi delle dipendenze o del setup.
