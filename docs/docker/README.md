@@ -7,7 +7,7 @@ Docker vuole rendere **immediata** l'installazione di un software su qualsiasi m
 
 > "Docker is for server applications—Web sites, APIs, messaging solutions and other components that run in the background. You can't run desktop apps in Docker because there's no UI integration between the Docker platform and the Windows host. That rules out running Windows Forms or Windows Presentation Foundation (WPF) apps in containers (although you could use Docker to package and distribute those desktop apps), but Windows Communication Foundation (WCF), .NET console apps and all flavors of ASP.NET are great candidates."
 ::: tip
-In parole semplici: niente app con le UI nei container
+In parole semplici: niente app con le [UI](https://it.wikipedia.org/wiki/Interfaccia_utente) nei container
 | Applicativo                                                           | Va bene?      |
 | --------------------------------------------------------------------- |:-------------:|
 | [Redis](https://redis.io/)                                            | Yes           |
