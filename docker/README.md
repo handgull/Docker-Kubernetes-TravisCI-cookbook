@@ -71,7 +71,7 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 #### Docker image
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
-Un immagine è una rappresentazione binaria, come gli OVA (le immagine delle VM)<br>
+Un'immagine è una rappresentazione binaria, come gli OVA (le immagine delle VM)<br>
 All'interno di un'immagine vi è:
 1. un **File system Snapshot**, ovvero una "foto" di un [File system](https://it.wikipedia.org/wiki/File_system) da implementare, una specie di copia-incolla di directory e files.
 2. uno **Startup Command**, ovvero un comando che si esegue all'avvio del container.
