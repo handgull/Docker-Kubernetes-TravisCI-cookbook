@@ -19,12 +19,7 @@ module.exports = {
     }
   },
   plugins: [
-    ['@vuepress/nprogress', true],
-    ['@vuepress/back-to-top', true],
-    '@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }
+    '@vuepress/back-to-top'
   ]
 }
 
