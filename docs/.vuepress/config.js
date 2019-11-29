@@ -2,7 +2,7 @@ module.exports = {
   title: 'Docker, Kubernetes & Travis CI',
   description: 'I primi passi verso il Dev Ops',
   themeConfig: {
-    logo: '/assets/img/logo.png',
+    logo: './assets/img/logo.png',
     repo: 'handgull/Docker-Kubernetes-TravisCI-cookbook',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
@@ -19,11 +19,12 @@ module.exports = {
     }
   },
   plugins: [
-    ['@vuepress/back-to-top'],
-    ['@vuepress/pwa', {
+    ['@vuepress/nprogress', true],
+    ['@vuepress/back-to-top', true],
+    '@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
-    }]
+    }
   ]
 }
 
