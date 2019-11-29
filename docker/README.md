@@ -67,14 +67,14 @@ Una volta creato un container a partire da questa immagine il container isolerà
 ![docker-diagrams-06](./assets/docker-diagrams-07.png)
 
 ##### Image Layers
-Un altra nozione interessante è che le immagini possono avere un rapporto parent-child (padre-figlio), ovvero un'immagine può essere creata usandone un altra come base. Analizziamone i vantaggi:
-- In questo modo è possibile che delle immagini condividano dei nodi
-- Se trovo una vulnerabilità/problema in un nodo la modularità dell'immagine mi fa comodo
+Un altra nozione interessante è che le immagini possono avere un rapporto **parent-child** (padre-figlio), ovvero un'immagine può essere creata usandone un altra come **base**. Analizziamone i vantaggi:
+- In questo modo è possibile che delle immagini **condividano** dei **nodi**
+- Se trovo una vulnerabilità/problema in un nodo la **modularità** dell'immagine mi fa comodo
 
 ![docker-diagrams-06](./assets/docker-diagrams-10.png)
 
 ### Dockerfile
-Un dockerfile è un envinronment descritto in un file di testo, dentro si scrivono comandi docker di cui necessitiamo l'esecuzione per configurare la nostra **immagine custom** (vedi capitolo)
+Un dockerfile è un **envinronment** descritto in un file di testo, dentro si scrivono comandi docker di cui necessitiamo l'esecuzione per configurare la nostra **immagine custom** (vedi capitolo)
 
 ## HOW: Come fa Docker a girare
 Installando Docker si installa una **Linux VM** (Virtual Machine) ed è dentro di essa che sono creati i container.
