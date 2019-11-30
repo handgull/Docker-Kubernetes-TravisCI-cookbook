@@ -82,7 +82,7 @@ Per vedere l'**output** di un docker container stoppato **senza farlo ripartire*
 
 ## Multi-command Containers (& -it)
 A volte abbiamo la necessita di fornire ad un container (attivo), anche altri comandi **oltre a quello di startup**.<br>
-Ad esempio in un container contenente **Redis** che si compone di due applicativi, server e cli ci serve quasi sicuramente fornire più comandi per fare interagire gli applicativi
+Ad esempio in un container contenente **Redis**, che si compone di due applicativi (server e cli), ci serve quasi sicuramente fornire più comandi per fare interagire gli applicativi
 ``` bash
 > (sudo) docker exec -it <container_id> <command> # Fornisce al container un comando da eseguire
 ```
