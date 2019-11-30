@@ -1,11 +1,11 @@
 # Manipolare i container
 
 ## Creare e avviare un container
-``` bash
+``` sh
 > (sudo) docker run <nome_immagine> # Crea ed avvia il container usando l'immagine
 ```
 È anche possibile fare un [override](https://it.wikipedia.org/wiki/Override) del comando eseguito all'avvio del container:
-``` bash
+``` sh
 > (sudo) docker run <nome_immagine> <optional_override_command> # All'avvio non uso il comando specificato nell'immagine
 # Ad esempio:
 > (sudo) docker run busybox ls # Crea l'immagine e fa vedere il File system del container
@@ -14,7 +14,7 @@
 > Se provate `docker run hello-world ls` vi darà errore, perchè **nel container**, più precisamente nel suo FS, **non c'è** un eseguibile che renda sensato il comando `ls`
 
 ## Lista dei container attivi
-``` bash
+``` sh
 > (sudo) docker ps # Lista dei container che stanno girando sulla macchina
 > (sudo) docker ps --all # Lista di tutti i container mai eseguiti ed anche in esecuzione
 ```
@@ -34,7 +34,7 @@ Nel campo **NAMES** vi è un nome generato casualmente per identificare il conta
 
 - Nella fase di **creazione** di un container il FS viene **caricato** nell' Hard Drive.
 - Nella fase di **esecuzione** eseguo lo **Startup Command**
-``` bash
+``` sh
 > (sudo) docker create <optional_override_command># Crea il container e soprattutto ne stampa a video l'id
 > (sudo) docker start -a <id> # Esegue lo Startup Command del container
 ```
@@ -49,7 +49,7 @@ Nel caso in cui io faccio ripartire un container **non posso effettuare un Overr
 :::
 
 ### Removing Stopped Containers
-``` bash
+``` sh
 > (sudo) docker system prune # Elimina tutti i container stoppati ed altre cose (l'avviso prima della conferma del comando è già dettagliata)
 # NOTA: tra le altre cose si cancella anche la build cache (ovvero quella che chiamavo imageCache)
 #       significa che le immagini scaricate da docker hub necessiteranno un altro download
@@ -59,7 +59,7 @@ Nel caso in cui io faccio ripartire un container **non posso effettuare un Overr
 :::
 
 ### Stopping Running Containers
-``` bash
+``` sh
 > (sudo) docker stop <id> # Do del tempo al container per fermarsi "con le buone"
 > (sudo) docker kill <id> # Termina il processo immediatamente
 ```
@@ -76,14 +76,14 @@ Se io do il **SIGTERM** ad un container che sta pingando google, il container no
 
 ## Ottenere Log Outputs
 Per vedere l'**output** di un docker container stoppato **senza farlo ripartire**:
-``` bash
+``` sh
 > (sudo) docker logs <id>
 ```
 
 ## Multi-command Containers (& -it)
 A volte abbiamo la necessita di fornire ad un container (attivo), anche altri comandi **oltre a quello di startup**.<br>
 Ad esempio in un container contenente **Redis**, che si compone di due applicativi (server e cli), ci serve quasi sicuramente fornire più comandi per fare interagire gli applicativi
-``` bash
+``` sh
 > (sudo) docker exec -it <container_id> <command> # Fornisce al container un comando da eseguire
 ```
 > l'opzione `-it` permette di **dare un input** al container, senza di essa ad esempio il comando `docker exec <id> redis-cli` terminerebbe senza poter dare input alla console di redis.
@@ -98,7 +98,7 @@ Ricordiamoci che docker gira su una **VM Linux**, i processi quindi comunicano t
 
 ### Aprire un terminale fisso sul container
 L'approccio visto sopra è valido, ma se dobbiamo dare molteplici comandi risulta scomodo... esiste quindi un modo per aprire un contatto fisso con il container:
-``` bash{3}
+``` sh{3}
 > (sudo) docker exec -it <container_id> sh # Il comando 'sh' mi da un accesso completo alla shell (UNIX in questo caso) del container
 # SE il container ne ha una...
 # Oppure se è la prima esecuzione:

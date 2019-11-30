@@ -17,3 +17,4 @@ Fonti:<br>
 - [Corso Udemy - Stephen Grider](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/)
 - [What is a Container? -  VMware Cloud Native Apps](https://www.youtube.com/watch?v=EnJ7qX9fkcU&feature=youtu.be)
 - [The Benefits of Containers -  VMware Cloud Native Apps](https://www.youtube.com/watch?v=cCTLjAdIQho&feature=youtu.be)
+- [Best practices for writing Dockerfiles - Docker docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)

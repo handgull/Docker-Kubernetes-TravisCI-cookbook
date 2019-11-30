@@ -39,7 +39,7 @@ C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI possiamo 
 :::
 - **Docker CLI** = applicativo che da terminale mi aiuta a dare **comandi** al Docker Server.
 - **Docker Server** = applicativo che gira in background tramite il quale io faccio tutto ciò che è possibile fare con docker.
-``` bash{4}
+``` sh{4}
 $ docker version # Comando per poter vedere le versioni di Docker Client/Server ed altre info (come la versione di golang usata da Docker)
 
 $ (sudo) docker run hello-world # Facciamo girare il nostro primo container!
@@ -80,19 +80,14 @@ Una volta creato un container a partire da questa immagine il container isolerà
 
 ![docker-diagrams-06](./assets/docker-diagrams-07.png)
 
-##### Image Layers
-Un altra nozione interessante è che le immagini possono avere un rapporto **parent-child** (padre-figlio), ovvero un'immagine può essere creata usandone un altra come **base**. Analizziamone i vantaggi:
-- In questo modo è possibile che delle immagini **condividano** dei **nodi**
-- Se trovo una vulnerabilità/problema in un nodo la **modularità** dell'immagine mi fa comodo
-
-![docker-diagrams-10](./assets/docker-diagrams-10.png)
-
-### Dockerfile
-Un dockerfile è un **envinronment** descritto in un file di testo, dentro si scrivono comandi docker di cui necessitiamo l'esecuzione per configurare la nostra **immagine custom** (vedi capitolo)
+> Più avanti vedremo anche il concetto di **Immagine custom**
 
 ## HOW: Come fa Docker a girare
 Installando Docker si installa una **Linux VM** :penguin: ed è dentro di essa che sono creati i container.
 ::: tip
 Infatti lanciando il comando sopra citato `docker version` e guardando su che [OS](https://it.wikipedia.org/wiki/Sistema_operativo) stanno girando Server e Client vedremo un sistema linux
 :::
+
 ![docker-diagrams-08](./assets/docker-diagrams-08.png)
+
+> Docker ha performance peggiori su windows, questo sta per essere sistemato in parte con [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-about).
