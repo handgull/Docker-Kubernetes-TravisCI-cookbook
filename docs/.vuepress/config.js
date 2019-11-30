@@ -16,7 +16,8 @@ module.exports = {
       '/docker/': getDockerSidebar('Docker', 'Travis CI', 'Kubernetes'),
       '/travis/': getTravisSidebar('Docker', 'Travis CI', 'Kubernetes'),
       '/kubernetes/': getKubernetesSidebar('Docker', 'Travis CI', 'Kubernetes'),
-    }
+    },
+    smoothScroll: true
   },
   plugins: [
     '@vuepress/back-to-top',
@@ -36,7 +37,8 @@ function getDockerSidebar (groupA, groupB, groupC) {
       sidebarDepth: 2,
       children: [
         '',
-        './manipulating-containers/'
+        './manipulating-containers/',
+        './custom-images/'
       ]
     }, {
       title: groupB,

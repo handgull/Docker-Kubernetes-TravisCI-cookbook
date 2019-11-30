@@ -71,7 +71,7 @@ Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come vis
 #### Docker image
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
-Un'immagine è una rappresentazione binaria, come gli OVA (le immagine delle VM)<br>
+Un'immagine è una rappresentazione binaria, come gli OVA (le immagine delle [VM](https://it.wikipedia.org/wiki/Macchina_virtuale))<br>
 All'interno di un'immagine vi è:
 1. un **File system Snapshot**, ovvero una "foto" di un [File system](https://it.wikipedia.org/wiki/File_system) da implementare, una specie di copia-incolla di directory e files.
 2. uno **Startup Command**, ovvero un comando che si esegue all'avvio del container.
@@ -91,7 +91,7 @@ Un altra nozione interessante è che le immagini possono avere un rapporto **par
 Un dockerfile è un **envinronment** descritto in un file di testo, dentro si scrivono comandi docker di cui necessitiamo l'esecuzione per configurare la nostra **immagine custom** (vedi capitolo)
 
 ## HOW: Come fa Docker a girare
-Installando Docker si installa una **Linux VM** (Virtual Machine) ed è dentro di essa che sono creati i container.
+Installando Docker si installa una **Linux VM** :penguin: ed è dentro di essa che sono creati i container.
 ::: tip
 Infatti lanciando il comando sopra citato `docker version` e guardando su che [OS](https://it.wikipedia.org/wiki/Sistema_operativo) stanno girando Server e Client vedremo un sistema linux
 :::

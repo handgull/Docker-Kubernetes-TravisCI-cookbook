@@ -18,7 +18,7 @@
 > (sudo) docker ps # Lista dei container che stanno girando sulla macchina
 > (sudo) docker ps --all # Lista di tutti i container mai eseguiti ed anche in esecuzione
 ```
-> Da qui si nota una cosa: dopo aver eseguito il container hello-world se uso il comando senza --all non lista nessun container attivo, perchè **appena finisce l'esecuzione del comando il container smette di essere attivo**.<br>
+> Da qui notiamo una cosa: dopo aver eseguito il container hello-world se uso il comando senza `--all` non lista nessun container attivo, perchè **appena finisce l'esecuzione del comando il container smette di essere attivo**.<br>
 Proviamo quindi a dare il comando `docker run busybox ping 8.8.8.8` e a ridare il comando `docker ps`... il risultato è diverso!
 
 ![screenshot01](./assets/screenshot-01.png)
@@ -39,11 +39,11 @@ Nel campo **NAMES** vi è un nome generato casualmente per identificare il conta
 > (sudo) docker start -a <id> # Esegue lo Startup Command del container
 ```
 ::: tip
-se eseguissimo `docker start` senza **-a** vedremmo a video solo l'id del container, -a quindi specifica a docker di far **ascoltare** al terminale l'output del container.
+se eseguissimo `docker start` senza **-a** vedremmo a video solo l'id del container, `-a` quindi specifica a docker di far **ascoltare** al terminale l'output del container.
 :::
 
 ### Restarting Stopped Containers
-Quando un container è nello stato **Exited** (si vede dando docker ps --all) posso farlo ripartire per riusarlo tramite **docker start**, visto appena sopra.
+Quando un container è nello stato **Exited** (si vede dando `docker ps --all`) posso farlo ripartire per riusarlo tramite **docker start**, visto appena sopra.
 ::: warning
 Nel caso in cui io faccio ripartire un container **non posso effettuare un Override** dello Startup command, essendo questo disponibile in **fase di creazione**.
 :::
@@ -79,3 +79,33 @@ Per vedere l'**output** di un docker container stoppato **senza farlo ripartire*
 ``` bash
 > (sudo) docker logs <id>
 ```
+
+## Multi-command Containers (& -it)
+A volte abbiamo la necessita di fornire ad un container (attivo), anche altri comandi **oltre a quello di startup**.<br>
+Ad esempio in un container contenente **Redis** che si compone di due applicativi, server e cli ci serve quasi sicuramente fornire più comandi per fare interagire gli applicativi
+``` bash
+> (sudo) docker exec -it <container_id> <command> # Fornisce al container un comando da eseguire
+```
+> l'opzione `-it` permette di **dare un input** al container, senza di essa ad esempio il comando `docker exec <id> redis-cli` terminerebbe senza poter dare input alla console di redis.
+
+> Ed è formato (e per cio riscrivibile come la somma dei due) da `-i` e `-t`, dove:
+> 1. `-i` dice che ciò che scriviamo da deve passare al segnale **STDIN** del processo (vedi sotto).
+> 2. `-t` si occupa di **formattare** decentemente il testo di risposta del container e dare anche degli **autocomplete**.
+
+Ricordiamoci che docker gira su una **VM Linux**, i processi quindi comunicano tramite **segnali** come i 3 segnali rappresentati nel diagramma (**STDIN**, **STDOUT** e **STDERR**):
+
+![docker-diagrams-12](./assets/docker-diagrams-12.png)
+
+### Aprire un terminale fisso sul container
+L'approccio visto sopra è valido, ma se dobbiamo dare molteplici comandi risulta scomodo... esiste quindi un modo per aprire un contatto fisso con il container:
+``` bash{3}
+> (sudo) docker exec -it <container_id> sh # Il comando 'sh' mi da un accesso completo alla shell (UNIX in questo caso) del container
+# SE il container ne ha una...
+# Oppure se è la prima esecuzione:
+> (sudo) docker run -it <image_name> sh
+# (Per uscire serve il comando di uscita previsto dalla shell)
+```
+Alternative possibili ad `sh` (Command Processors/[Shell](https://it.wikipedia.org/wiki/Shell_(informatica))):
+1. `bash`
+2. `powershell` ---> container windows :nauseated_face:
+3. `zsh`
