@@ -29,13 +29,14 @@ Un container è un **processo** con delle limitazioni hardware, non è un costru
 
 ![docker-diagrams-06](./assets/docker-diagrams-06.png)
 
+### Ecosistema Docker
 Docker è una piattaforma che si compone di tools per la gestione dei **container**.
 
 ![docker-diagrams-02](./assets/docker-diagrams-02.png)
 
-### Focus: Docker Client e Docker Server
+#### Focus: Docker Client e Docker Server
 ::: tip
-C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI possiamo dire alla docker Hub (Passando per il Docker Server, a.k.a. Daemon) di scaricare una determinata **Docker image** (Vedi [sotto](./#docker-image)), che può essere usata per instanziare un container
+C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI possiamo dire alla docker Hub (Passando per il Docker Server, a.k.a. Daemon) di scaricare una determinata **Docker image** (Vedi [sotto](./#docker-images)), che può essere usata per instanziare un container
 :::
 - **Docker CLI** = applicativo che da terminale mi aiuta a dare **comandi** al Docker Server.
 - **Docker Server** = applicativo che gira in background tramite il quale io faccio tutto ciò che è possibile fare con docker.
@@ -64,11 +65,11 @@ Messaggio stampato a video dopo l'esecuzione:
 ![docker-diagrams-03](./assets/docker-diagrams-03.png)
 ![docker-diagrams-04](./assets/docker-diagrams-04.png)
 
-### Focus: Docker Hub e Docker Images
+#### Focus: Docker Hub e Docker Images
 Il Docker Hub è una repository piena di immagini gratuite e pubbliche, come visto sopra quando non si trova un immagine Docker prova automaticamente a scaricarla da qui.
 
 
-#### Docker image
+### Docker images
 > Se sei finito qui tramite il link sopra ecco un link per [tornarci](./#focus-docker-client-e-docker-server)
 
 Un'immagine è una rappresentazione binaria, come gli OVA (le immagine delle [VM](https://it.wikipedia.org/wiki/Macchina_virtuale))<br>
@@ -83,7 +84,7 @@ Una volta creato un container a partire da questa immagine il container isolerà
 > Più avanti vedremo anche il concetto di **Immagine custom**
 
 ## HOW: Come fa Docker a girare
-Installando Docker si installa una **Linux VM** :penguin: ed è dentro di essa che sono creati i container.
+Installando Docker si installa una **Linux VM** :penguin: ed è dentro di essa che sono creati i container.<br> I container usano quindi le funzioni fornite dai sistemi UNIX per isolare le risorse dei processi ecc, per questo è utile conoscere a fondo i sistemi UNIX o almeno argomenti imprescindibili come [chroot, cgroups e namespaces](./chroot-cgroups-namespaces.md).
 ::: tip
 Infatti lanciando il comando sopra citato `docker version` e guardando su che [OS](https://it.wikipedia.org/wiki/Sistema_operativo) stanno girando Server e Client vedremo un sistema linux
 :::
