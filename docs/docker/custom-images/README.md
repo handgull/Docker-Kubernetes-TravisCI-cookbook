@@ -20,3 +20,6 @@ Le immagini hanno un rapporto **parent-child** (padre-figlio), ovvero un'immagin
 ### Dockerfile: esercitazione
 
 [GO!](./exercise-redis-custom-image.md)
+
+### Processo di creazione nel dettaglio
+WIP

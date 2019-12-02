@@ -5,10 +5,10 @@ next: false
 Creiamo un file Dockerfile all'interno di una nuova cartella
 ``` docker
 # Usiamo un immagine esistente come base
-FROM alpine # Specifico alpine come immagine di base
+FROM alpine # Specifico alpine come immagine di base (alpine è un OS unix-like)
 
 # Scarichiamo ed installiamo le dipendenze
-RUN apk add --update redis # Comando mandato ad alpine: 'apk add --update redis'
+RUN apk add --update redis # Comando mandato ad alpine (apk = packet manager di alpine)
 
 # Specifichiamo uno Startup command
 CMD ["redis-server"]
