@@ -14,14 +14,15 @@ module.exports = {
       { text: 'Kubernetes', link: '/kubernetes/' }
     ],
     sidebar: {
-      '/docker/': getDockerSidebar('Docker', 'Travis CI', 'Kubernetes'),
-      '/travis/': getTravisSidebar('Docker', 'Travis CI', 'Kubernetes'),
-      '/kubernetes/': getKubernetesSidebar('Docker', 'Travis CI', 'Kubernetes'),
+      '/docker/': getDockerSidebar('Docker', 'Travis CI', 'Kubernetes (K8s)'),
+      '/travis/': getTravisSidebar('Docker', 'Travis CI', 'Kubernetes (K8s)'),
+      '/kubernetes/': getKubernetesSidebar('Docker', 'Travis CI', 'Kubernetes (K8s)'),
     },
     smoothScroll: true
   },
   plugins: [
     '@vuepress/back-to-top',
+    '@vuepress/medium-zoom',
     ['@vuepress/pwa', {
       serviceWorker: true,
       popupComponent: 'MySWUpdatePopup',
