@@ -2,6 +2,7 @@
 
 ## WHY & WHAT: perchè usare docker? Cos'è?
 Docker vuole rendere **immediata** l'installazione di un software su qualsiasi macchina senza preoccuparsi delle dipendenze o del setup.
+> Il concetto di "container" non è certo stato introdotto da Docker ed esisteva già negli anni 70 (es: linux namespaces, come vedremo pià avanti).
 
 ![docker-diagrams-01](./assets/docker-diagrams-01.png)
 
