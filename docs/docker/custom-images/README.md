@@ -21,5 +21,17 @@ Le immagini hanno un rapporto **parent-child** (padre-figlio), ovvero un'immagin
 
 [GO!](./exercise-redis-custom-image.md)
 
-### Processo di creazione nel dettaglio
-WIP
+#### Processo di creazione nel dettaglio
+Ogni riga del dockerfile si traduce in un immagine, usata per raggiungere il risultato.
+> Se aggiungessimo ad esempio una riga per installare, ad esempio, gcc (compilatore C++), avremmo un'altra immagine intermedia.
+
+Come possiamo vedere dallo screen dell'esercitazione dal passagio 2/3 una volta fatto girare il processo interessato l'**immagine intermedia** viene terminata.
+::: tip
+Come visto anche precedentemente in caso di rebuild la **cache** del docker hub ci aiuta, non dovendo scaricare le immagini.<br>
+la novità è che anche le nostre **immagini custom** intermedie sono cachizzate.
+:::
+::: warning
+Se invece invertissimo l'ordine degli step intermedi la cache non servirebbe, dato che le immagini intermedie sarebbero leggermente **diverse**
+:::
+
+![docker-diagrams-15](./assets/docker-diagrams-15.png)
