@@ -85,7 +85,7 @@ Una volta creato un container a partire da questa immagine il container isolerà
 > Più avanti vedremo anche il concetto di **Immagine custom**
 
 ## HOW: Come fa Docker a girare
-Installando Docker si installa una **Linux VM** :penguin: ed è dentro di essa che sono creati i container.<br> I container usano quindi le funzioni fornite dai sistemi UNIX per isolare le risorse dei processi ecc, per questo è utile conoscere a fondo i sistemi UNIX o almeno argomenti imprescindibili come [chroot, cgroups e namespaces](./chroot-cgroups-namespaces.md).
+Docker gira su **Linux** :penguin:. (se si è in ambito windows, ad esempio, docker sfrutta **WSL**)<br> I container usano quindi le funzioni fornite dai sistemi UNIX per isolare le risorse dei processi ecc, per questo è utile conoscere a fondo i sistemi UNIX o almeno argomenti imprescindibili come [chroot, cgroups e namespaces](./chroot-cgroups-namespaces.md).
 ::: tip
 Infatti lanciando il comando sopra citato `docker version` e guardando su che [OS](https://it.wikipedia.org/wiki/Sistema_operativo) stanno girando Server e Client vedremo un sistema linux
 :::
