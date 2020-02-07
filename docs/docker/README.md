@@ -42,9 +42,9 @@ C'è da considerare che **Docker Client = Docker CLI**, tramite la CLI possiamo 
 - **Docker CLI** = applicativo che da terminale mi aiuta a dare **comandi** al Docker Server.
 - **Docker Server** = applicativo che gira in background tramite il quale io faccio tutto ciò che è possibile fare con docker.
 ``` sh{4}
-$ docker version # Comando per poter vedere le versioni di Docker Client/Server ed altre info (come la versione di golang usata da Docker)
+docker version # Comando per poter vedere le versioni di Docker Client/Server ed altre info (come la versione di golang usata da Docker)
 
-$ (sudo) docker run hello-world # Facciamo girare il nostro primo container!
+(sudo) docker run hello-world # Facciamo girare il nostro primo container!
 # Se l'immagine non è presente nell'imageCache verrà scaricata
 # Questo container stamperà a video un messaggio che spiega il processo fatto da docker per fare girare un container
 # ↓
