@@ -15,7 +15,7 @@ CMD ["redis-server"]
 ```
 Ora da terminale diamo il comando:
 ``` sh
-docker build . # Trovandoci nella stessa cartella del Dockerfile
+(sudo) docker build . # Trovandoci nella stessa cartella del Dockerfile
 ```
 
 ![screenshot-03](./assets/screenshot-03.png)

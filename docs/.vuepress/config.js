@@ -41,7 +41,8 @@ function getDockerSidebar (groupA, groupB, groupC) {
       children: [
         '',
         './manipulating-containers/',
-        './custom-images/'
+        './custom-images/',
+        './docker-compose/'
       ]
     }, {
       title: groupB,
